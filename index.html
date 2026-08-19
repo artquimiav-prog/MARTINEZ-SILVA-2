@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Martínez &amp; Silva Asociados — Abogados en materia procesal penal, civil, laboral y constitucional</title>
+<meta name="description" content="Martínez &amp; Silva Asociados — más de 25 años de experiencia en derecho procesal penal, civil, laboral y constitucional en Venezuela. Escríbenos por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* ==========================================================================
+     DESIGN KEY TOKEN SYSTEM — Toga Design System v1.1
+     Único origen de verdad. Ningún valor fuera de estos tokens.
+     ========================================================================== */
+  :root{
+    /* Color */
+    --maa-navy:#1B3450;
+    --maa-navy-deep:#101F31;
+    --maa-ink:#211E1A;
+    --maa-gold:#B8863B;
+    --maa-gold-light:#D7AE72;
+    --maa-sienna:#A15A3C;
+    --maa-paper:#F3EFE6;
+    --maa-paper-deep:#E8E1D2;
+    --maa-stone:#C9C2B0;
+    --maa-white:#FFFFFF;
+
+    /* Tipografía */
+    --maa-font-display:'Fraunces', Georgia, serif;
+    --maa-font-body:'Inter', -apple-system, sans-serif;
+    --maa-font-utility:'IBM Plex Mono', 'Courier New', monospace;
+
+    --maa-text-xs:12px;
+    --maa-text-sm:14px;
+    --maa-text-base:16px;
+    --maa-text-lg:20px;
+    --maa-text-xl:28px;
+    --maa-text-2xl:40px;
+    --maa-text-3xl:56px;
+    --maa-text-4xl:80px;
+
+    /* Espaciado (unidad base 8px) */
+    --maa-space-1:4px;
+    --maa-space-2:8px;
+    --maa-space-3:16px;
+    --maa-space-4:24px;
+    --maa-space-5:32px;
+    --maa-space-6:48px;
+    --maa-space-7:64px;
+    --maa-space-8:96px;
+
+    /* Radio */
+    --maa-radius-sm:2px;
+    --maa-radius-md:4px;
+
+    /* Derivados de layout (no son tokens de marca, son mecánicos) */
+    --maa-nav-height:72px;
+    --maa-max-width:1200px;
+  }
+
+  /* ==========================================================================
+     RESET MÍNIMO
+     ========================================================================== */
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; scroll-padding-top:var(--maa-nav-height); }
+  body{
+    margin:0;
+    font-family:var(--maa-font-body);
+    color:var(--maa-ink);
+    background:var(--maa-paper);
+    font-size:var(--maa-text-base);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{ font-family:var(--maa-font-display); margin:0; color:var(--maa-navy); }
+  p{ margin:0; }
+  a{ color:inherit; }
+  ul{ margin:0; padding:0; list-style:none; }
+  button{ font-family:inherit; cursor:pointer; }
+  img,svg{ display:block; max-width:100%; }
+
+  /* texto nunca por encima de ~65 caracteres */
+  .measure{ max-width:65ch; }
+
+  /* foco visible en todo lo navegable */
+  a:focus-visible,
+  button:focus-visible,
+  summary:focus-visible{
+    outline:3px solid var(--maa-gold);
+    outline-offset:3px;
+    border-radius:var(--maa-radius-sm);
+  }
+
+  .container{
+    max-width:var(--maa-max-width);
+    margin-inline:auto;
+    padding-inline:var(--maa-space-4);
+  }
+  section{ padding-block:var(--maa-space-8); }
+
+  .eyebrow{
+    font-family:var(--maa-font-utility);
+    font-size:var(--maa-text-xs);
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--maa-sienna);
+    display:inline-block;
+    margin-bottom:var(--maa-space-3);
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:var(--maa-space-2);
+    padding:var(--maa-space-3) var(--maa-space-5);
+    border-radius:var(--maa-radius-md);
+    font-family:var(--maa-font-utility);
+    font-size:var(--maa-text-sm);
+    letter-spacing:1px;
+    text-decoration:none;
+    border:2px solid transparent;
+    transition:transform .15s ease, background-color .15s ease, color .15s ease;
+  }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn-primary{ background:var(--maa-gold); color:var(--maa-navy-deep); }
+  .btn-primary:hover{ background:var(--maa-gold-light); }
+  .btn-secondary{ background:transparent; border-color:var(--maa-navy); color:var(--maa-navy); }
+  .btn-secondary:hover{ background:var(--maa-navy); color:var(--maa-paper); }
+  .btn-on-dark{ border-color:var(--maa-gold-light); color:var(--maa-paper); }
+  .btn-on-dark:hover{ background:var(--maa-gold-light); color:var(--maa-navy-deep); }
+
+  /* ==========================================================================
+     1. NAV FIJO TRANSLÚCIDO
+     ========================================================================== */
+  .nav{
+    position:fixed; inset-inline:0; top:0; z-index:100;
+    height:var(--maa-nav-height);
+    display:flex; align-items:center;
+    background:rgba(16,31,49,0.86);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(215,174,114,0.25);
+  }
+  .nav .container{
+    display:flex; align-items:center; justify-content:space-between;
+    width:100%;
+  }
+  .nav-logo{
+    font-family:var(--maa-font-display);
+    font-weight:700;
+    font-size:var(--maa-text-lg);
+    color:var(--maa-paper);
+    text-decoration:none;
+    letter-spacing:.5px;
+  }
+  .nav-logo em{ font-style:italic; color:var(--maa-gold-light); font-weight:400; }
+  .nav-links{
+    display:flex; align-items:center; gap:var(--maa-space-5);
+  }
+  .nav-links a{
+    font-family:var(--maa-font-utility);
+    font-size:var(--maa-text-xs);
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:var(--maa-stone);
+    transition:color .15s ease;
+  }
+  .nav-links a:hover{ color:var(--maa-paper); }
+  .nav-cta{ display:none; }
+  .nav-toggle{
+    display:flex; align-items:center; justify-content:center;
+    width:44px; height:44px;
+    background:transparent; border:none; color:var(--maa-paper);
+    padding:0;
+  }
+  .nav-toggle svg{ width:24px; height:24px; }
+
+  /* menú full-screen bajo 768px */
+  .mobile-menu{
+    position:fixed; inset:0; top:var(--maa-nav-height); z-index:90;
+    background:var(--maa-navy-deep);
+    display:flex; flex-direction:column;
+    align-items:center; justify-content:center;
+    gap:var(--maa-space-5);
+    transform:translateY(-12px);
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .2s ease, transform .2s ease;
+  }
+  .mobile-menu.is-open{
+    opacity:1; transform:translateY(0); pointer-events:auto;
+  }
+  .mobile-menu a{
+    font-family:var(--maa-font-display);
+    font-size:var(--maa-text-xl);
+    color:var(--maa-paper);
+    text-decoration:none;
+  }
+
+  /* ==========================================================================
+     2. HERO
+     ========================================================================== */
+  .hero{
+    position:relative;
+    overflow:hidden;
+    padding-top:calc(var(--maa-nav-height) + var(--maa-space-8));
+    padding-bottom:var(--maa-space-8);
+    color:var(--maa-paper);
+  }
+  .hero::before{
+    content:"";
+    position:absolute; top:0; right:0; bottom:0;
+    width:48%;
+    background-image:url('/hero.jpg');
+    background-size:cover;
+    background-position:60% 15%;
+    opacity:0.8;
+    z-index:0;
+    -webkit-mask-image:linear-gradient(90deg, transparent 0%, black 55%);
+    mask-image:linear-gradient(90deg, transparent 0%, black 55%);
+  }
+  .hero::after{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      radial-gradient(900px 500px at 92% 0%, rgba(184,134,59,0.20), transparent 55%),
+      linear-gradient(90deg, rgba(16,31,49,0.97) 0%, rgba(16,31,49,0.95) 42%, rgba(16,31,49,0.65) 70%, rgba(16,31,49,0.30) 100%);
+    z-index:1;
+  }
+  .hero > .container{ position:relative; z-index:2; }
+  .hero-headline{
+    font-size:clamp(2rem, 5.5vw, var(--maa-text-4xl));
+    font-weight:900;
+    line-height:1.08;
+    color:var(--maa-paper);
+    max-width:16ch;
+    margin-bottom:var(--maa-space-4);
+  }
+  .hero-sub{
+    font-size:var(--maa-text-lg);
+    color:var(--maa-stone);
+    max-width:52ch;
+    margin-bottom:var(--maa-space-5);
+  }
+  .hero-actions{
+    display:flex; flex-wrap:wrap; gap:var(--maa-space-3);
+  }
+  .hero-icon{
+    margin-bottom:var(--maa-space-4);
+    animation:icon-pop .7s cubic-bezier(.34,1.56,.64,1) both;
+    animation-delay:.1s;
+  }
+
+  /* ==========================================================================
+     3. BARRA DE PRUEBA SOCIAL
+     ========================================================================== */
+  .proof{
+    background:var(--maa-paper-deep);
+    border-bottom:1px solid var(--maa-stone);
+  }
+  .proof .container{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:var(--maa-space-5);
+    padding-block:var(--maa-space-6);
+  }
+  .proof-item{
+    text-align:left;
+    display:flex;
+    align-items:center;
+    gap:var(--maa-space-3);
+  }
+  .proof-icon{
+    width:36px; height:36px;
+    flex:none;
+    transition:transform .3s ease;
+  }
+  .proof-item:hover .proof-icon{ transform:scale(1.15) rotate(-3deg); }
+  .proof-item.fade-up.is-visible .proof-icon{
+    animation:icon-pop .5s cubic-bezier(.34,1.56,.64,1) both;
+    animation-delay:.15s;
+  }
+  .proof-text{
+    display:flex;
+    flex-direction:column;
+  }
+  .proof-number{
+    font-family:var(--maa-font-display);
+    font-weight:700;
+    font-size:var(--maa-text-2xl);
+    color:var(--maa-navy);
+    display:block;
+  }
+  .proof-label{
+    font-family:var(--maa-font-utility);
+    font-size:var(--maa-text-xs);
+    letter-spacing:1px;
+    color:var(--maa-sienna);
+    text-transform:uppercase;
+  }
+
+  /* ==========================================================================
+     5. SERVICIOS
+     ========================================================================== */
+  .section-head{ margin-bottom:var(--maa-space-6); }
+  .section-title{ font-size:var(--maa-text-2xl); font-weight:700; margin-bottom:var(--maa-space-3); }
+  .section-sub{ color:var(--maa-ink); opacity:.8; }
+
+  .services-grid{
+    display:grid; gap:var(--maa-space-4);
+    grid-template-columns:1fr;
+  }
+  @media (min-width:600px){
+    .services-grid{ grid-template-columns:repeat(2,1fr); }
+  }
+  @media (min-width:1100px){
+    .services-grid{ grid-template-columns:repeat(4,1fr); }
+  }
+  .service-card{
+    background:var(--maa-white);
+    border:1px solid var(--maa-paper-deep);
+    border-radius:var(--maa-radius-md);
+    padding:var(--maa-space-5);
+  }
+  .service-icon{
+    width:48px; height:48px;
+    margin-bottom:var(--maa-space-4);
+    transition:transform .35s cubic-bezier(.34,1.56,.64,1);
+  }
+  .service-card:hover .service-icon{ transform:scale(1.12) rotate(-4deg); }
+  .service-card.fade-up.is-visible .service-icon{
+    animation:icon-pop .55s cubic-bezier(.34,1.56,.64,1) both;
+    animation-delay:.2s;
+  }
+  .service-title{
+    font-size:var(--maa-text-lg); font-weight:700;
+    margin-bottom:var(--maa-space-2);
+  }
+  .service-desc{ color:var(--maa-ink); opacity:.85; }
+  .service-sublist{
+    margin-top:var(--maa-space-3);
+    padding-left:0;
+    list-style:none;
+  }
+  .service-sublist li{
+    position:relative;
+    padding-left:var(--maa-space-3);
+    font-size:var(--maa-text-sm);
+    color:var(--maa-ink);
+    opacity:.85;
+    margin-top:var(--maa-space-2);
+  }
+  .service-sublist li::before{
+    content:"";
+    position:absolute; left:0; top:.55em;
+    width:6px; height:6px;
+    background:var(--maa-gold);
+    border-radius:50%;
+  }
+
+  /* ==========================================================================
+     6. CÓMO TRABAJAMOS — línea de tiempo
+     ========================================================================== */
+  .timeline{
+    display:grid; gap:var(--maa-space-5);
+    grid-template-columns:1fr;
+  }
+  .timeline-step{ position:relative; padding-left:var(--maa-space-6); }
+  .timeline-num{
+    position:absolute; left:0; top:0;
+    width:40px; height:40px;
+    border-radius:50%;
+    background:var(--maa-navy);
+    color:var(--maa-gold-light);
+    font-family:var(--maa-font-utility);
+    font-size:var(--maa-text-sm);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .timeline-title{ font-weight:700; margin-bottom:var(--maa-space-1); }
+  .timeline-desc{ opacity:.85; font-size:var(--maa-text-sm); }
+
+  /* ==========================================================================
+     7. TESTIMONIOS
+     ========================================================================== */
+  .testimonials-grid{
+    display:grid; gap:var(--maa-space-4);
+    grid-template-columns:1fr;
+  }
+  #testimonios{
+    background:
+      radial-gradient(900px 400px at 85% 0%, rgba(184,134,59,0.16), transparent 60%),
+      var(--maa-navy-deep);
+  }
+  #testimonios .eyebrow{ color:var(--maa-gold-light); }
+  #testimonios .section-title{ color:var(--maa-paper); }
+  #testimonios .section-sub{ color:var(--maa-stone); opacity:1; }
+  .testimonial-card{
+    background:var(--maa-navy);
+    color:var(--maa-paper);
+    border:1px solid rgba(215,174,114,0.25);
+    border-radius:var(--maa-radius-md);
+    padding:var(--maa-space-5);
+    display:flex; flex-direction:column; gap:var(--maa-space-4);
+  }
+  .testimonial-card.is-pending{
+    background:transparent;
+    border:2px dashed var(--maa-stone);
+    color:var(--maa-stone);
+    opacity:.8;
+    align-items:center; justify-content:center; text-align:center;
+    font-family:var(--maa-font-utility); font-size:var(--maa-text-sm);
+    letter-spacing:1px;
+  }
+  .testimonial-stars{
+    display:flex; gap:var(--maa-space-1);
+  }
+  .testimonial-stars svg{ width:18px; height:18px; }
+  .testimonial-card.fade-up.is-visible .testimonial-stars svg{
+    animation:icon-pop .4s cubic-bezier(.34,1.56,.64,1) both;
+  }
+  .testimonial-card.fade-up.is-visible .testimonial-stars svg:nth-child(1){ animation-delay:.15s; }
+  .testimonial-card.fade-up.is-visible .testimonial-stars svg:nth-child(2){ animation-delay:.22s; }
+  .testimonial-card.fade-up.is-visible .testimonial-stars svg:nth-child(3){ animation-delay:.29s; }
+  .testimonial-card.fade-up.is-visible .testimonial-stars svg:nth-child(4){ animation-delay:.36s; }
+  .testimonial-card.fade-up.is-visible .testimonial-stars svg:nth-child(5){ animation-delay:.43s; }
+  .testimonial-quote{
+    font-family:var(--maa-font-display);
+    font-style:italic;
+    font-size:var(--maa-text-lg);
+    line-height:1.4;
+    color:var(--maa-stone);
+  }
+  .testimonial-quote::before{ content:"“"; color:var(--maa-gold-light); }
+  .testimonial-quote::after{ content:"”"; color:var(--maa-gold-light); }
+  .testimonial-name{
+    font-family:var(--maa-font-utility);
+    font-size:var(--maa-text-xs);
+    letter-spacing:1px;
+    color:var(--maa-gold-light);
+    text-transform:uppercase;
+  }
+
+  /* ==========================================================================
+     8. FAQ — ACORDEÓN
+     ========================================================================== */
+  .faq-list{ border-top:1px solid var(--maa-paper-deep); }
+  .faq-item{ border-bottom:1px solid var(--maa-paper-deep); }
+  .faq-question{
+    width:100%;
+    display:flex; align-items:center; justify-content:space-between;
+    gap:var(--maa-space-3);
+    background:transparent; border:none;
+    padding:var(--maa-space-4) var(--maa-space-2);
+    text-align:left;
+    font-family:var(--maa-font-display);
+    font-size:var(--maa-text-lg);
+    color:var(--maa-navy);
+  }
+  .faq-icon{
+    flex:none; width:20px; height:20px;
+    transition:transform .2s ease;
+  }
+  .faq-question[aria-expanded="true"] .faq-icon{ transform:rotate(45deg); }
+  .faq-answer{
+    display:grid;
+    grid-template-rows:0fr;
+    transition:grid-template-rows .25s ease;
+  }
+  .faq-answer > div{ overflow:hidden; }
+  .faq-item.is-open .faq-answer{ grid-template-rows:1fr; }
+  .faq-answer p{
+    padding:0 var(--maa-space-2) var(--maa-space-4);
+    color:var(--maa-ink); opacity:.85;
+    max-width:65ch;
+  }
+
+  /* ==========================================================================
+     QUIÉN LLEVA SU CASO — sección con fotografía del fundador
+     ========================================================================== */
+  .founder-section{
+    background:
+      radial-gradient(900px 420px at 12% 0%, rgba(184,134,59,0.16), transparent 60%),
+      var(--maa-navy-deep);
+  }
+  .founder-section .eyebrow{ color:var(--maa-gold-light); }
+  .founder-section .section-title{ color:var(--maa-paper); }
+  .founder-section .section-sub{ color:var(--maa-stone); opacity:1; }
+  .founder-name{ color:var(--maa-paper); }
+  .founder-bio{ color:var(--maa-stone); }
+  .attorneys-grid{
+    display:grid; gap:var(--maa-space-6);
+    grid-template-columns:1fr;
+  }
+  .attorney-card{
+    display:grid; gap:var(--maa-space-5);
+    grid-template-columns:1fr;
+    align-items:center;
+  }
+  .founder-photo-frame{
+    position:relative;
+    border-radius:var(--maa-radius-md);
+    overflow:hidden;
+    border:2px solid var(--maa-gold);
+    max-width:300px;
+    margin-inline:auto;
+    aspect-ratio:560/1280;
+  }
+  .founder-photo-frame.is-portrait{ aspect-ratio:3/4; }
+  .founder-photo-frame img{
+    width:100%; height:100%; object-fit:cover; object-position:top center; display:block;
+  }
+  .founder-photo-frame.is-placeholder{
+    background:var(--maa-navy);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .founder-photo-frame.is-placeholder .initials{
+    font-family:var(--maa-font-display);
+    font-weight:700;
+    font-size:64px;
+    color:var(--maa-gold-light);
+  }
+  .founder-photo-tag{
+    position:absolute; left:var(--maa-space-3); bottom:var(--maa-space-3);
+    background:rgba(16,31,49,0.82);
+    color:var(--maa-gold-light);
+    font-family:var(--maa-font-utility);
+    font-size:var(--maa-text-xs);
+    letter-spacing:1px;
+    padding:var(--maa-space-1) var(--maa-space-2);
+    border-radius:var(--maa-radius-sm);
+  }
+  .founder-name{
+    font-size:var(--maa-text-xl);
+    margin-bottom:var(--maa-space-1);
+  }
+  .founder-role{
+    font-family:var(--maa-font-utility);
+    font-size:var(--maa-text-xs);
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--maa-sienna);
+    display:block;
+    margin-bottom:var(--maa-space-4);
+  }
+  .founder-bio{ margin-bottom:var(--maa-space-4); }
+  @media (min-width:600px){
+    .attorney-card{ grid-template-columns:0.7fr 1.3fr; }
+  }
+  @media (min-width:900px){
+    .attorneys-grid{ grid-template-columns:repeat(2,1fr); }
+    .attorney-card{ grid-template-columns:1fr; text-align:center; }
+    .attorney-card .founder-role{ }
+  }
+
+  /* ==========================================================================
+     FORMULARIO DE CONTACTO
+     ========================================================================== */
+  .contact-section{ background:var(--maa-paper); }
+  .contact-wrap{
+    display:grid; gap:var(--maa-space-6);
+    grid-template-columns:1fr;
+  }
+  .contact-form{
+    display:grid; gap:var(--maa-space-4);
+    background:var(--maa-white);
+    border:1px solid var(--maa-paper-deep);
+    border-radius:var(--maa-radius-md);
+    padding:var(--maa-space-5);
+  }
+  .form-row{ display:grid; gap:var(--maa-space-2); }
+  .form-row label{
+    font-family:var(--maa-font-utility);
+    font-size:var(--maa-text-xs);
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:var(--maa-sienna);
+  }
+  .form-row input,
+  .form-row textarea{
+    font-family:var(--maa-font-body);
+    font-size:var(--maa-text-base);
+    color:var(--maa-ink);
+    background:var(--maa-paper);
+    border:1px solid var(--maa-stone);
+    border-radius:var(--maa-radius-md);
+    padding:var(--maa-space-3);
+    width:100%;
+  }
+  .form-row input:focus-visible,
+  .form-row textarea:focus-visible{
+    outline:3px solid var(--maa-gold);
+    outline-offset:1px;
+    border-color:var(--maa-navy);
+  }
+  .form-row textarea{ min-height:120px; resize:vertical; }
+  .form-two-col{
+    display:grid; gap:var(--maa-space-4);
+    grid-template-columns:1fr;
+  }
+  .form-submit{
+    justify-self:start;
+    border:none;
+  }
+  .form-note{
+    font-size:var(--maa-text-sm);
+    color:var(--maa-ink);
+    opacity:.7;
+  }
+  @media (min-width:768px){
+    .contact-wrap{ grid-template-columns:1fr 1.1fr; align-items:start; }
+    .form-two-col{ grid-template-columns:1fr 1fr; }
+  }
+
+  /* ==========================================================================
+     9. CTA FINAL
+     ========================================================================== */
+  .cta-final{
+    background:
+      radial-gradient(900px 400px at 15% 110%, rgba(184,134,59,0.22), transparent 60%),
+      var(--maa-navy-deep);
+    color:var(--maa-paper);
+    text-align:center;
+  }
+  .cta-final .section-title{ color:var(--maa-paper); }
+  .cta-final .section-sub{ color:var(--maa-stone); margin-inline:auto; }
+  .cta-final .hero-actions{ justify-content:center; margin-top:var(--maa-space-5); }
+
+  /* ==========================================================================
+     FOOTER
+     ========================================================================== */
+  .footer{
+    background:var(--maa-navy-deep);
+    color:var(--maa-stone);
+    border-top:1px solid rgba(215,174,114,0.2);
+  }
+  .footer .container{
+    padding-block:var(--maa-space-7);
+    display:grid; gap:var(--maa-space-6);
+    grid-template-columns:1fr;
+  }
+  .footer-brand{
+    font-family:var(--maa-font-display);
+    color:var(--maa-paper);
+    font-size:var(--maa-text-lg);
+    margin-bottom:var(--maa-space-2);
+  }
+  .footer-tagline{
+    font-family:var(--maa-font-display); font-style:italic;
+    color:var(--maa-gold-light); font-size:var(--maa-text-sm);
+  }
+  .footer-col-title{
+    font-family:var(--maa-font-utility);
+    font-size:var(--maa-text-xs);
+    letter-spacing:1.5px; text-transform:uppercase;
+    color:var(--maa-gold-light);
+    margin-bottom:var(--maa-space-3);
+  }
+  .footer-col a{
+    display:block; text-decoration:none; color:var(--maa-stone);
+    font-size:var(--maa-text-sm);
+    padding-block:var(--maa-space-1);
+  }
+  .footer-col a:hover{ color:var(--maa-paper); }
+  .footer-bottom{
+    border-top:1px solid rgba(201,194,176,0.15);
+    padding-block:var(--maa-space-4);
+    font-family:var(--maa-font-utility); font-size:var(--maa-text-xs);
+    color:var(--maa-stone); text-align:center;
+  }
+
+  /* ==========================================================================
+     ANIMACIÓN DE APARICIÓN (16px, respeta prefers-reduced-motion)
+     ========================================================================== */
+  @keyframes icon-pop{
+    0%{ opacity:0; transform:scale(.4) rotate(-8deg); }
+    100%{ opacity:1; transform:scale(1) rotate(0); }
+  }
+  @keyframes wa-pulse{
+    0%,100%{ transform:scale(1); }
+    50%{ transform:scale(1.12); }
+  }
+  @keyframes wa-ring{
+    0%{ box-shadow:0 8px 20px rgba(16,31,49,0.35), 0 0 0 0 rgba(184,134,59,0.5); }
+    100%{ box-shadow:0 8px 20px rgba(16,31,49,0.35), 0 0 0 14px rgba(184,134,59,0); }
+  }
+  .fade-up{
+    opacity:0; transform:translateY(16px);
+    transition:opacity .5s ease, transform .5s ease;
+  }
+  .fade-up.is-visible{ opacity:1; transform:translateY(0); }
+  .section-head .eyebrow.fade-up{ transition-delay:0s; }
+  .section-head .section-title.fade-up{ transition-delay:.08s; }
+  .section-head .section-sub.fade-up{ transition-delay:.16s; }
+  @media (prefers-reduced-motion: reduce){
+    .fade-up{ opacity:1; transform:none; transition:none; }
+    html{ scroll-behavior:auto; }
+    .proof-item.fade-up.is-visible .proof-icon,
+    .service-card.fade-up.is-visible .service-icon,
+    .testimonial-card.fade-up.is-visible .testimonial-stars svg,
+    .hero-icon,
+    .whatsapp-float,
+    .whatsapp-float::before{
+      animation:none !important;
+    }
+  }
+
+  /* ==========================================================================
+     BOTÓN WHATSAPP FLOTANTE
+     ========================================================================== */
+  .whatsapp-float{
+    position:fixed; right:var(--maa-space-4); bottom:var(--maa-space-4); z-index:80;
+    width:56px; height:56px; border-radius:50%;
+    background:var(--maa-gold);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 8px 20px rgba(16,31,49,0.35);
+    text-decoration:none;
+    animation:wa-pulse 2.6s ease-in-out infinite, wa-ring 2.6s ease-out infinite;
+  }
+  .whatsapp-float:hover{ animation-play-state:paused; }
+  .whatsapp-float svg{ width:26px; height:26px; }
+
+  /* ==========================================================================
+     BREAKPOINTS — 768px y 1440px
+     ========================================================================== */
+  @media (min-width:768px){
+    .nav-links{ display:flex; }
+    .nav-toggle{ display:none; }
+    .nav-cta{ display:inline-flex; }
+    .proof .container{ grid-template-columns:repeat(4,1fr); }
+    .timeline{ grid-template-columns:repeat(4,1fr); }
+    .timeline-step{ padding-left:0; padding-top:var(--maa-space-6); }
+    .timeline-num{ left:0; top:0; }
+    .testimonials-grid{ grid-template-columns:repeat(3,1fr); }
+    .footer .container{ grid-template-columns:1.4fr 1fr 1fr; }
+  }
+  @media (min-width:1440px){
+    .container{ padding-inline:0; }
+    .hero-headline{ font-size:var(--maa-text-4xl); }
+  }
+
+  /* nav-links ocultos por defecto en móvil (el menú full-screen los reemplaza) */
+  @media (max-width:767px){
+    .nav-links{ display:none; }
+  }
+
+  .sr-only{
+    position:absolute; width:1px; height:1px;
+    padding:0; margin:-1px; overflow:hidden;
+    clip:rect(0,0,0,0); white-space:nowrap; border:0;
+  }
+</style>
+</head>
+<body>
+
+<!-- =========================================================
+     1. NAV FIJO TRANSLÚCIDO
+     ========================================================= -->
+<nav class="nav">
+  <div class="container">
+    <a href="#inicio" class="nav-logo">Martínez <em>&amp; Silva Asociados</em></a>
+    <ul class="nav-links">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#como-trabajamos">Cómo trabajamos</a></li>
+      <li><a href="#testimonios">Testimonios</a></li>
+      <li><a href="#faq">Preguntas</a></li>
+    </ul>
+    <a class="btn btn-primary nav-cta" href="https://wa.me/584124445559?text=Hola%2C%20quisiera%20una%20orientaci%C3%B3n%20legal" target="_blank" rel="noopener">Escríbenos</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menú">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#servicios">Servicios</a>
+  <a href="#como-trabajamos">Cómo trabajamos</a>
+  <a href="#testimonios">Testimonios</a>
+  <a href="#faq">Preguntas</a>
+  <a class="btn btn-on-dark" href="https://wa.me/584124445559?text=Hola%2C%20quisiera%20una%20orientaci%C3%B3n%20legal" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+</div>
+
+<!-- =========================================================
+     2. HERO
+     ========================================================= -->
+<header class="hero" id="inicio">
+  <div class="container">
+    <svg class="hero-icon" width="64" height="64" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+      <rect x="97" y="72" width="6" height="106" fill="#F3EFE6"/>
+      <rect x="62" y="178" width="76" height="7" rx="2" fill="#F3EFE6"/>
+      <rect x="34" y="68" width="132" height="6" rx="3" fill="#F3EFE6"/>
+      <circle cx="100" cy="71" r="7" fill="#D7AE72"/>
+      <line x1="40" y1="74" x2="40" y2="112" stroke="#F3EFE6" stroke-width="3" stroke-linecap="round"/>
+      <path d="M22,112 A18,10 0 0 0 58,112" stroke="#F3EFE6" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <line x1="160" y1="74" x2="160" y2="112" stroke="#F3EFE6" stroke-width="3" stroke-linecap="round"/>
+      <path d="M142,112 A18,10 0 0 0 178,112" stroke="#F3EFE6" stroke-width="4" fill="none" stroke-linecap="round"/>
+    </svg>
+    <span class="eyebrow">Derecho penal · civil · laboral · constitucional</span>
+    <h1 class="hero-headline fade-up">Cuando su caso importa, la estrategia marca la diferencia.</h1>
+    <p class="hero-sub fade-up" style="transition-delay:.1s;">Somos Martínez &amp; Silva Asociados: más de 25 años acompañando a personas y empresas en Venezuela con criterio jurídico, cercanía y claridad en cada etapa del proceso.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="https://wa.me/584124445559?text=Hola%2C%20quisiera%20una%20orientaci%C3%B3n%20legal" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+      <a class="btn btn-secondary" style="border-color:var(--maa-gold-light); color:var(--maa-paper);" href="#servicios">Conoce nuestros servicios</a>
+    </div>
+  </div>
+</header>
+
+<!-- =========================================================
+     3. BARRA DE PRUEBA SOCIAL
+     ========================================================= -->
+<section class="proof" style="padding-block:0;">
+  <div class="container">
+    <div class="proof-item fade-up">
+      <svg class="proof-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <line x1="6" y1="40" x2="42" y2="40" stroke="#1B3450" stroke-width="2"/>
+        <rect x="8" y="28" width="6" height="12" fill="#1B3450"/>
+        <rect x="18" y="20" width="6" height="20" fill="#1B3450"/>
+        <rect x="28" y="12" width="6" height="28" fill="#1B3450"/>
+        <rect x="38" y="6" width="6" height="34" fill="#B8863B"/>
+      </svg>
+      <div class="proof-text">
+        <span class="proof-number">25+</span>
+        <span class="proof-label">Años de trayectoria</span>
+      </div>
+    </div>
+    <div class="proof-item fade-up">
+      <svg class="proof-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <rect x="10" y="12" width="28" height="6" rx="2" fill="#1B3450"/>
+        <rect x="10" y="21" width="28" height="6" rx="2" fill="#A15A3C"/>
+        <rect x="10" y="30" width="28" height="6" rx="2" fill="#B8863B"/>
+      </svg>
+      <div class="proof-text">
+        <span class="proof-number">4</span>
+        <span class="proof-label">Áreas de práctica</span>
+      </div>
+    </div>
+    <div class="proof-item fade-up">
+      <svg class="proof-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <rect x="6" y="16" width="14" height="22" fill="none" stroke="#1B3450" stroke-width="2.5"/>
+        <rect x="10" y="20" width="3" height="3" fill="#1B3450"/>
+        <rect x="16" y="20" width="3" height="3" fill="#1B3450"/>
+        <rect x="10" y="26" width="3" height="3" fill="#1B3450"/>
+        <rect x="16" y="26" width="3" height="3" fill="#1B3450"/>
+        <circle cx="32" cy="20" r="5" fill="#B8863B"/>
+        <path d="M24,38 a8,8 0 0 1 16,0" fill="#B8863B"/>
+      </svg>
+      <div class="proof-text">
+        <span class="proof-label" style="font-size:var(--maa-text-base); color:var(--maa-navy); text-transform:none; letter-spacing:0; font-family:var(--maa-font-body);">Disponible para: empresas y personas naturales</span>
+      </div>
+    </div>
+    <div class="proof-item fade-up">
+      <svg class="proof-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M24 6c-7 0-12 5-12 12 0 9 12 24 12 24s12-15 12-24c0-7-5-12-12-12z" fill="none" stroke="#1B3450" stroke-width="2.5"/>
+        <circle cx="24" cy="18" r="5" fill="#B8863B"/>
+      </svg>
+      <div class="proof-text">
+        <span class="proof-number">Valencia</span>
+        <span class="proof-label">Carabobo, Venezuela</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     5. SERVICIOS
+     ========================================================= -->
+<section id="servicios">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow fade-up">Qué hacemos</span>
+      <h2 class="section-title fade-up">Cuatro materias, un mismo criterio</h2>
+      <p class="section-sub measure fade-up">No necesita buscar un abogado distinto para cada problema legal: lo acompañamos con el mismo criterio en las cuatro áreas.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service-card fade-up">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <rect x="22" y="10" width="4" height="26" rx="1" fill="#1B3450"/>
+          <rect x="14" y="34" width="20" height="4" rx="1" fill="#1B3450"/>
+          <rect x="8" y="8" width="32" height="4" rx="2" fill="#1B3450"/>
+          <circle cx="24" cy="9" r="3" fill="#B8863B"/>
+          <line x1="12" y1="12" x2="12" y2="24" stroke="#1B3450" stroke-width="2"/>
+          <path d="M6,24 A6,4 0 0 0 18,24" stroke="#1B3450" stroke-width="2" fill="none"/>
+          <line x1="36" y1="12" x2="36" y2="24" stroke="#1B3450" stroke-width="2"/>
+          <path d="M30,24 A6,4 0 0 0 42,24" stroke="#1B3450" stroke-width="2" fill="none"/>
+        </svg>
+        <h3 class="service-title">Derecho procesal penal</h3>
+        <p class="service-desc">Defensa desde las primeras actuaciones: investigación, acusación, control de pruebas y acompañamiento en cada fase del proceso.</p>
+        <ul class="service-sublist">
+          <li>Solicitud de avocamiento ante la Sala de Casación Penal del Tribunal Supremo de Justicia</li>
+          <li>Interposición de solicitudes de inspección integral</li>
+        </ul>
+      </article>
+      <article class="service-card fade-up">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <rect x="10" y="8" width="28" height="34" rx="2" fill="none" stroke="#1B3450" stroke-width="2.5"/>
+          <line x1="16" y1="17" x2="32" y2="17" stroke="#B8863B" stroke-width="2.5"/>
+          <line x1="16" y1="24" x2="32" y2="24" stroke="#1B3450" stroke-width="2.5"/>
+          <line x1="16" y1="31" x2="26" y2="31" stroke="#1B3450" stroke-width="2.5"/>
+        </svg>
+        <h3 class="service-title">Derecho civil</h3>
+        <p class="service-desc">Contratos, sucesiones, propiedad y conflictos civiles resueltos con estrategia clara, sin desgastar más de lo necesario la relación entre las partes.</p>
+      </article>
+      <article class="service-card fade-up">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <rect x="8" y="16" width="32" height="22" rx="2" fill="none" stroke="#1B3450" stroke-width="2.5"/>
+          <path d="M17,16 V12 a3,3 0 0 1 3,-3 h8 a3,3 0 0 1 3,3 v4" fill="none" stroke="#1B3450" stroke-width="2.5"/>
+          <line x1="8" y1="25" x2="40" y2="25" stroke="#B8863B" stroke-width="2.5"/>
+        </svg>
+        <h3 class="service-title">Derecho laboral</h3>
+        <p class="service-desc">Despidos injustificados, prestaciones sociales y reclamos laborales, tanto para trabajadores como para empresas que necesitan asesoría preventiva.</p>
+        <ul class="service-sublist">
+          <li>Revisión técnica de procedimientos ante organismos de la Administración del Trabajo</li>
+          <li>Solicitudes de inspección integral</li>
+        </ul>
+      </article>
+      <article class="service-card fade-up">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M24,6 L38,11 V22 C38,32 32,39 24,42 C16,39 10,32 10,22 V11 Z" fill="none" stroke="#1B3450" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M17,23 L22,28 L31,17" fill="none" stroke="#B8863B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3 class="service-title">Derecho constitucional</h3>
+        <p class="service-desc">Protección de garantías fundamentales frente a actos u omisiones que las vulneren.</p>
+        <ul class="service-sublist">
+          <li>Acción de amparo constitucional</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     6. CÓMO TRABAJAMOS
+     ========================================================= -->
+<section id="como-trabajamos" style="background:var(--maa-paper-deep);">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow fade-up">Proceso</span>
+      <h2 class="section-title fade-up">Cómo trabajamos</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-step fade-up">
+        <span class="timeline-num">1</span>
+        <p class="timeline-title">Consulta inicial</p>
+        <p class="timeline-desc">Nos escribe por WhatsApp y le orientamos sobre su situación.</p>
+      </div>
+      <div class="timeline-step fade-up">
+        <span class="timeline-num">2</span>
+        <p class="timeline-title">Análisis del caso</p>
+        <p class="timeline-desc">Revisamos los detalles con criterio jurídico y sin apuro.</p>
+      </div>
+      <div class="timeline-step fade-up">
+        <span class="timeline-num">3</span>
+        <p class="timeline-title">Estrategia a medida</p>
+        <p class="timeline-desc">Definimos el camino más conveniente para su caso puntual.</p>
+      </div>
+      <div class="timeline-step fade-up">
+        <span class="timeline-num">4</span>
+        <p class="timeline-title">Acompañamiento</p>
+        <p class="timeline-desc">Le informamos en cada etapa, hasta la resolución del proceso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     QUIÉN LLEVA SU CASO
+     ========================================================= -->
+<section class="founder-section" id="fundador">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow fade-up">Quiénes llevan su caso</span>
+      <h2 class="section-title fade-up">Los abogados detrás de cada estrategia</h2>
+    </div>
+
+    <div class="attorneys-grid">
+      <div class="attorney-card fade-up">
+        <div class="founder-photo-frame">
+          <img src="/wilmer.jpg" alt="Wilmer Martínez, socio fundador de Martínez &amp; Silva Asociados">
+          <span class="founder-photo-tag">WILMER MARTÍNEZ</span>
+        </div>
+        <div>
+          <h3 class="founder-name">Wilmer Martínez</h3>
+          <span class="founder-role">Socio fundador</span>
+          <p class="founder-bio measure">Con más de 25 años de experiencia en derecho procesal penal, civil, laboral y constitucional, Wilmer atiende personalmente cada caso que llega al despacho. Ha participado en eventos nacionales sobre Derecho Procesal Penal, y cree que la mejor defensa empieza por explicar con claridad qué está pasando y qué opciones existen.</p>
+        </div>
+      </div>
+
+      <div class="attorney-card fade-up">
+        <div class="founder-photo-frame">
+          <img src="/yamileth.jpg" alt="Yamileth Silva, socia de Martínez &amp; Silva Asociados">
+          <span class="founder-photo-tag">YAMILETH SILVA</span>
+        </div>
+        <div>
+          <h3 class="founder-name">Yamileth Silva</h3>
+          <span class="founder-role">Socia</span>
+          <p class="founder-bio measure">Reconocida por sus clientes por su capacidad analítica y su criterio práctico, Yamileth complementa cada estrategia con consejos claros y directos. Escucha con atención cada caso y responde con la rapidez que el momento exige.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:var(--maa-space-6);">
+      <a class="btn btn-primary" href="https://wa.me/584124445559?text=Hola%2C%20quisiera%20una%20orientaci%C3%B3n%20legal" target="_blank" rel="noopener">Escríbanos por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     7. TESTIMONIOS
+     ========================================================= -->
+<section id="testimonios">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow fade-up">Confianza</span>
+      <h2 class="section-title fade-up">Lo que dicen quienes ya confiaron en nosotros</h2>
+    </div>
+    <div class="testimonials-grid">
+      <article class="testimonial-card fade-up">
+        <div class="testimonial-stars" role="img" aria-label="Calificación: 5 de 5 estrellas"><svg viewBox="0 0 24 24" fill="#B8863B" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24" fill="#B8863B" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24" fill="#B8863B" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24" fill="#B8863B" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24" fill="#B8863B" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L2 9.2l7.1-.6z"/></svg></div>
+        <p class="testimonial-quote">La Dra. Yamileth Silva y su equipo trabajaron muy duro para conseguirme un excelente acuerdo y resolver el caso lo más rápido posible. No hay palabras suficientes para describir lo que lograron por nosotros. Si alguna vez necesito representación de nuevo, definitivamente volveré a Martínez &amp; Silva Asociados.</p>
+        <span class="testimonial-name">— Jesica</span>
+      </article>
+      <article class="testimonial-card fade-up">
+        <div class="testimonial-stars" role="img" aria-label="Calificación: 5 de 5 estrellas"><svg viewBox="0 0 24 24" fill="#B8863B" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24" fill="#B8863B" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24" fill="#B8863B" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24" fill="#B8863B" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24" fill="#B8863B" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L2 9.2l7.1-.6z"/></svg></div>
+        <p class="testimonial-quote">La capacidad analítica y los años de experiencia del Dr. Wilmer Martínez y la Dra. Yamileth Silva le permiten brindarme consejos legales y prácticos a nuestro caso. Siempre escuchó atentamente mis preguntas y respondió rápido y con claridad.</p>
+        <span class="testimonial-name">— Magaly</span>
+      </article>
+      <article class="testimonial-card fade-up">
+        <div class="testimonial-stars" role="img" aria-label="Calificación: 5 de 5 estrellas"><svg viewBox="0 0 24 24" fill="#B8863B" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24" fill="#B8863B" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24" fill="#B8863B" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24" fill="#B8863B" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24" fill="#B8863B" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L2 9.2l7.1-.6z"/></svg></div>
+        <p class="testimonial-quote">Estoy muy contento con cómo el abogado manejó mi caso. También con el acuerdo que pudo conseguirme. Estoy muy agradecido por la ayuda y por cómo me trataron en Martínez &amp; Silva Asociados. ¡Gracias!</p>
+        <span class="testimonial-name">— Robert</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     8. FAQ — ACORDEÓN
+     ========================================================= -->
+<section id="faq" style="background:var(--maa-paper-deep);">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow fade-up">Dudas frecuentes</span>
+      <h2 class="section-title fade-up">Preguntas frecuentes</h2>
+    </div>
+    <div class="faq-list fade-up">
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Qué debo hacer si me detienen o me denuncian?</span>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="#1B3450" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer"><div>
+          <p>Lo primero es no declarar sin asesoría legal y contactarnos lo antes posible. Cuanto antes recibamos su caso, más opciones de estrategia tenemos disponibles.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Atienden casos civiles y laborales, o solo penales?</span>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="#1B3450" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer"><div>
+          <p>Atendemos las cuatro materias: penal, civil, laboral y constitucional. Muchos casos cruzan más de un área, y trabajarlas bajo un mismo criterio evita contradicciones entre abogados distintos.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Atienden también a empresas, no solo a personas naturales?</span>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="#1B3450" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer"><div>
+          <p>Sí. Trabajamos tanto con particulares como con empresas que necesitan asesoría legal, ya sea puntual o de forma continua.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Cómo empiezo si necesito ayuda legal ahora mismo?</span>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="#1B3450" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer"><div>
+          <p>Escríbanos por WhatsApp al 0412-444-5559 y cuéntenos brevemente su situación. Le responderemos para orientarle sobre los siguientes pasos.</p>
+        </div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     FORMULARIO DE CONTACTO
+     ========================================================= -->
+<section class="contact-section" id="contacto">
+  <div class="container contact-wrap">
+    <div class="fade-up">
+      <span class="eyebrow">Escríbanos</span>
+      <h2 class="section-title">Cuéntenos su situación</h2>
+      <p class="section-sub measure">Complete el formulario con sus datos y una breve descripción de su caso. Al enviarlo, se abrirá WhatsApp con su mensaje listo para enviarnos — así podemos orientarle más rápido.</p>
+    </div>
+
+    <form class="contact-form fade-up" id="contactForm" novalidate>
+      <div class="form-two-col">
+        <div class="form-row">
+          <label for="ctName">Nombre y apellido</label>
+          <input type="text" id="ctName" name="name" autocomplete="name" required>
+        </div>
+        <div class="form-row">
+          <label for="ctPhone">Teléfono</label>
+          <input type="tel" id="ctPhone" name="phone" autocomplete="tel" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <label for="ctEmail">Correo electrónico</label>
+        <input type="email" id="ctEmail" name="email" autocomplete="email" required>
+      </div>
+      <div class="form-row">
+        <label for="ctMessage">Cuéntenos brevemente su situación</label>
+        <textarea id="ctMessage" name="message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary form-submit">Enviar por WhatsApp</button>
+      <p class="form-note">También puede escribirnos directamente al 0412-444-5559 o a abgwilmermartinez@gmail.com.</p>
+    </form>
+  </div>
+</section>
+
+<!-- =========================================================
+     9. CTA FINAL
+     ========================================================= -->
+<section class="cta-final">
+  <div class="container">
+    <span class="eyebrow" style="color:var(--maa-gold-light);">¿Enfrenta un proceso legal?</span>
+    <h2 class="section-title fade-up">Su defensa merece estrategia.</h2>
+    <p class="section-sub measure fade-up">Contar con asesoría jurídica especializada desde las primeras actuaciones puede marcar la diferencia en su caso.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="https://wa.me/584124445559?text=Hola%2C%20quisiera%20una%20orientaci%C3%B3n%20legal" target="_blank" rel="noopener">Solicitar consulta por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     FOOTER — 3 columnas
+     ========================================================= -->
+<footer class="footer">
+  <div class="container">
+    <div>
+      <p class="footer-brand">Martínez &amp; Silva Asociados</p>
+      <p class="footer-tagline">Su defensa merece estrategia.</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Áreas de práctica</p>
+      <a href="#servicios">Derecho procesal penal</a>
+      <a href="#servicios">Derecho civil</a>
+      <a href="#servicios">Derecho laboral</a>
+      <a href="#servicios">Derecho constitucional</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Contacto</p>
+      <a href="https://wa.me/584124445559?text=Hola%2C%20quisiera%20una%20orientaci%C3%B3n%20legal" target="_blank" rel="noopener">WhatsApp: 0412-444-5559</a>
+      <a href="mailto:abgwilmermartinez@gmail.com">abgwilmermartinez@gmail.com</a>
+      <span style="display:block; padding-block:var(--maa-space-1); font-size:var(--maa-text-sm);">Av. Montes de Oca c/c Rondón, Edif. El Socorro, piso 5, of. 51<br>Centro de Valencia, Edo. Carabobo, Venezuela</span>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 MARTÍNEZ &amp; SILVA ASOCIADOS — TODOS LOS DERECHOS RESERVADOS</div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/584124445559?text=Hola%2C%20quisiera%20una%20orientaci%C3%B3n%20legal" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 32 32" fill="#1B3450" aria-hidden="true"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.5.7 4.8 1.9 6.8L3 29l6.9-2.2c1.9 1.1 4.1 1.7 6.1 1.7 7 0 12.7-5.6 12.7-12.5S23 3 16 3zm0 22.6c-2 0-3.9-.5-5.5-1.5l-.4-.2-4.1 1.3 1.3-4-.3-.4c-1.2-1.8-1.8-3.9-1.8-6.1 0-6 5-10.9 11.1-10.9 6 0 10.9 4.9 10.9 10.9 0 6.1-4.9 10.9-11.2 10.9zm6-8.2c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.6-1-.9-1.6-2-1.9-2.3-.2-.3 0-.5.2-.7.2-.2.3-.4.5-.6.2-.2.2-.4.3-.6.1-.2.1-.5 0-.7-.1-.2-.8-1.9-1-2.6-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.8 5.1.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 2-.8 2.3-1.6.3-.8.3-1.4.2-1.6-.1-.1-.3-.2-.6-.4z"/></svg>
+</a>
+
+<script>
+(function(){
+  "use strict";
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Menú móvil full-screen ---------- */
+  var navToggle = document.getElementById('navToggle');
+  var mobileMenu = document.getElementById('mobileMenu');
+  function closeMenu(){
+    mobileMenu.classList.remove('is-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }
+  navToggle.addEventListener('click', function(){
+    var isOpen = mobileMenu.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  mobileMenu.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', closeMenu);
+  });
+
+  /* ---------- Scroll suave (offset ya cubierto por scroll-padding-top) ---------- */
+  document.querySelectorAll('a[href^="#"]').forEach(function(link){
+    link.addEventListener('click', function(e){
+      var id = link.getAttribute('href');
+      var target = document.querySelector(id);
+      if(target){
+        e.preventDefault();
+        target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+        history.pushState(null, '', id);
+      }
+    });
+  });
+
+  /* ---------- Aparición al hacer scroll (fade-up 16px) ---------- */
+  if('IntersectionObserver' in window && !reduceMotion){
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-up').forEach(function(el){ observer.observe(el); });
+  } else {
+    document.querySelectorAll('.fade-up').forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  /* ---------- Formulario de contacto → WhatsApp ---------- */
+  var contactForm = document.getElementById('contactForm');
+  if(contactForm){
+    contactForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      if(!contactForm.checkValidity()){
+        contactForm.reportValidity();
+        return;
+      }
+      var name = document.getElementById('ctName').value.trim();
+      var phone = document.getElementById('ctPhone').value.trim();
+      var email = document.getElementById('ctEmail').value.trim();
+      var message = document.getElementById('ctMessage').value.trim();
+
+      var text =
+        "Hola, quisiera una orientación legal.\n" +
+        "Nombre: " + name + "\n" +
+        "Teléfono: " + phone + "\n" +
+        "Correo: " + email + "\n" +
+        "Situación: " + message;
+
+      var url = "https://wa.me/584124445559?text=" + encodeURIComponent(text);
+      window.open(url, '_blank', 'noopener');
+    });
+  }
+
+  /* ---------- Acordeón FAQ accesible (solo uno abierto a la vez) ---------- */
+  var faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(function(item){
+    var button = item.querySelector('.faq-question');
+    button.addEventListener('click', function(){
+      var isOpen = item.classList.contains('is-open');
+      faqItems.forEach(function(other){
+        other.classList.remove('is-open');
+        other.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+      if(!isOpen){
+        item.classList.add('is-open');
+        button.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
